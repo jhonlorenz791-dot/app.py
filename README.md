@@ -2,10 +2,11 @@ Section: BSCS 1B
 
 Leader: 
     John Lorenz S. Japay
+
 Members:
-    John Christian Huit
-    Lonaliza Zafra
-    Ronald Mangmang
+       John Christian Huit
+       Lonaliza Zafra
+       Ronald Mangmang
 
 Title: Employee Information and Leave Management System
 
