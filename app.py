@@ -277,26 +277,26 @@ def handle_leave(index, action):
 
 @app.route('/employeedashboard')
 def employee_dashboard():
-    # 1. Security Check: Siguraduhin na may naka-login
+    
     emp_id = session.get('user_id')
     if not emp_id:
         flash("Please login first.", "warning")
         return redirect(url_for('login'))
 
-    # 2. Kunin ang Employee Data
+    
     emp_info = Employee.employee_data.get(str(emp_id))
     if not emp_info:
         flash("Employee record not found.", "danger")
         return redirect(url_for('login'))
 
-    # 3. Kunin ang Leave History ng employee na ito (Correction: Filter history here)
-    # Gagamit tayo ng list comprehension para makuha lang ang requests ng user na ito
+    
+    
     emp_history = [
         (i, req) for i, req in enumerate(LeaveSystem.leave_requests) 
         if str(req.get('id')) == str(emp_id)
     ]
 
-    # 4. I-render ang iisang template kasama ang lahat ng kailangang data
+    
     return render_template('employee_dashboard.html', employee=emp_info, history=emp_history,enumerate=enumerate)
 
 @app.route('/apply_leave', methods=['POST'])
@@ -314,46 +314,45 @@ def apply_leave():
             flash("Error: You have 0 leave credits left.", "danger")
             return redirect(url_for('employee_dashboard'))
 
-        # 2. Reason
+
         reason = request.form.get('reason')
         if not reason:
             flash("Error: Please provide a reason.", "warning")
             return redirect(url_for('employee_dashboard'))
 
-        # 3. Leave date
+        
         leave_date = request.form.get('leave_date')
         if not leave_date:
             flash("Error: Please provide a leave date.", "warning")
             return redirect(url_for('employee_dashboard'))
 
-        # 4. Date validation
+       
         leave_date_obj = datetime.strptime(leave_date, "%Y-%m-%d").date()
         if leave_date_obj < date.today():
             flash("Error: Cannot select past dates.", "danger")
             return redirect(url_for('employee_dashboard'))
 
-        # 5. Save
+       
         LeaveSystem.apply_leave(emp_info.get_name(), emp_id, reason, leave_date)
         flash("Leave request submitted successfully!", "success")
         return redirect(url_for('employee_dashboard'))
 
-    # if no employee
+   
     flash("Error: Employee information not found.", "danger")
     return redirect(url_for('login'))
     
 @app.route('/cancel_leave/<int:index>', methods=['POST'])
 def cancel_leave(index):
-    # 1. Kunin ang reason mula sa form
+    
     reason = request.form.get('cancel_reason')
     
-    # 2. Tawagin ang class method para i-update ang status sa "Pending Cancellation"
+   
     if LeaveSystem.request_cancellation(index, reason):
         flash("Cancellation request sent to HR.", "success")
     else:
         flash("Error: Cannot cancel leave or invalid request.", "danger")
     
-    # 3. LAGING redirect pabalik sa main dashboard
-    # Ito ang magpapatakbo ulit ng logic sa employee_dashboard() route
+   
     return redirect(url_for('employee_dashboard'))
 
 if __name__ == '__main__':
