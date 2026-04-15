@@ -87,4 +87,4 @@ it allows admin to:
 * Input the contact number of the employee
 * Create Employee account
 
-* We enhance this module so the admin can add the employee information especially the password and username so he/she can access the system when they are registered. We ensure that the ID of every employee is unique and display a error message if the ID already existed and	all required fields must be filled out.
+* We enhance this module so the admin can add the employee information especially the password and username so the employee can access the system when they are registered. We ensure that the ID of every employee is unique and display a error message if the ID already existed and	all required fields must be filled out.
