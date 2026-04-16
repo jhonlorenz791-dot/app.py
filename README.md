@@ -68,7 +68,7 @@ Completed Module:
 
 ## Module 1:Admin Dashboard and Action Selection
 
-it allows admin to:
+it allows admin to choose action:
 
 * View Employee List: it allows the Admin to see all registered employees in the system.
 * Register New Employee: it allows the Admin to add a new employee to the system.
