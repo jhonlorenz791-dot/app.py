@@ -85,6 +85,6 @@ it allows admin to:
 * Input the home address of the employee
 * Input the ID of the employee
 * Input the contact number of the employee
-* Create Employee account
+* Create a username and password for the employee's account
 
 * We enhance this module so the admin can add the employee information especially the password and username so the employee can access the system when they are registered. We ensure that the ID of every employee is unique and display a error message if the ID already existed and	all required fields must be filled out.
