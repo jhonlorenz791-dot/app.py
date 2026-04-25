@@ -102,3 +102,17 @@ the admin can modify the following information:
 * Employee Conact Number
 
 * We ensure that all required fields must be completed before any changes can be saved. If the admin attempts to submit the form with missing or incomplete information, the system will display an appropriate error message and prevent the update from being saved.
+
+---
+
+## Module 4: View All Employee List (Admin Dashboard)
+
+This module allows the administrator to view a complete list of all registered employees in the system. Through the admin dashboard, the following employee details are displayed:
+
+* Employee ID
+* Employee Full Name
+* Employee Address
+* Employee Contact Number
+* Employee Leave Credits
+
+* The View All Employee List feature provides a centralized overview of employee records, making it easier for the admin to monitor, verify, and manage employee information efficiently. It ensures that important details are readily accessible, supporting better decision-making and record management within the system.
