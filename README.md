@@ -99,7 +99,7 @@ the admin can modify the following information:
 
 * Employee Full Name
 * Employee Address
-* Employee Conact Number
+* Employee Contact Number
 
 * We ensure that all required fields must be completed before any changes can be saved. If the admin attempts to submit the form with missing or incomplete information, the system will display an appropriate error message and prevent the update from being saved.
 
@@ -182,24 +182,11 @@ This module allows employees to view their own leave history. It displays the fo
 
 ---
 
-## Module 10: Leave Cancelation
+
+## Module 10: Leave CancelLation
 
 This module allows employees to request the cancellation of their previously submitted or approved leave. To proceed, the employee must provide the following:
 
 * Reason for Cancellation
 
 * The Cancel Leave Request feature can be accessed through the employee’s leave history. The system ensures that a cancellation request cannot be submitted without a valid reason. If the reason field is left empty, the system will display an error message and prevent submission. Additionally, the system validates the leave date. If the employee attempts to cancel a leave with a past date, the request will not be allowed. All cancellation requests are subject to Admin approval. Once submitted, the request will be reviewed and either approved or rejected by the Admin.
-
----
-
-## Module 11: View Own Profile
-
-This module allows employees to view their own personal information. It displays the following details:
-
-* Employee ID
-* Full Name
-* Address
-* Contact Number
-* Available Leave Credits
-
-* The View Own Profile feature enables employees to easily access and review their personal details and current leave balance. This helps ensure transparency and allows employees to stay informed about their records within the system.
