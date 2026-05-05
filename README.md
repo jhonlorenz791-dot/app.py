@@ -1,3 +1,5 @@
+## Live server: https://employee-information-and-leave-mana-self.vercel.app
+
 ## Employee Information and Leave Management System
 
 **Employee Information and Leave Management System** is a web-based application that connects employees with Human Resources by storing records and leave information in a centralized database. It simplifies HR tasks, reduces paperwork, speeds up processing, and ensures data is organized and accurate. The system allows HR to manage employee records by adding new employees, view all employee list, editing employee information, approve/reject leave request and view all reports. It also enables employees to view their own profile, submit leave request, cancel leave request and view all history of their leave.
